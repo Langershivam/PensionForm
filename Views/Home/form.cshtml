@@ -1,0 +1,396 @@
+<div class="container-fluid bg-info text-center p-5" id="headings">
+    <h1>UNION TERRITORY OF JAMMU AND KASHMIR</h1>
+    <h2>SOCIAL WELFARE DEPARTMENT</h2>
+
+    <h3>Application Form for Sanction of Pension under JK-ISSS/GOI-NSAP</h3>
+</div>
+<form id="pensionform">
+    <div class="container-fluid">
+
+        @* location details *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Location Details</div>
+            <div class="col-sm-6 mt-3 fw-bold fs-6">
+                <label for="district" class="form-label">Select District</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-3 mb-2">
+                <select class="form-select" id="district" name="district">
+                    <option value="Please Select">Please Select</option>
+                    <option value="Jammu">Jammu</option>
+                    <option value="Rajouri">Rajouri</option>
+                    <option value="Poonch">Poonch</option>
+                    <option value="Kathua">Kathua</option>
+                </select>
+            </div>
+
+            <div class="col-sm-6 fw-bold">
+                <label for="Teshil" class="form-label">Select Teshil Social Welfare Office(TSWO)</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6">
+                <select class="form-select" id="tehsil" name="tehsil">
+                    <option value="Please Select">Please Select</option>
+                </select>
+            </div>
+        </div>
+        @* pension type *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Pension Type</div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6 mt-3 fw-bold fs-6">
+                        <label for="pension" class="form-label">Select Pension Type</label>
+                        <span class="text-danger">*</span>
+                    </div>
+                    <div class="col-sm-6 mt-3 mb-1">
+                        <select class="form-select" id="pensiontype" name="pensiontype">
+                            <option value="Please Select">Please Select</option>
+                            <option value="OLD AGE PENSION">OLD AGE PENSION</option>
+                            <option value="WOMEN IN DISTRESS">WOMEN IN DISTRESS</option>
+                            <option value="PHYSICALLY CHALLENGED PERSON">PHYSICALLY CHALLENGED PERSON</option>
+                            <option value="TRANSGENDER PERSON">TRANSGENDER PERSON</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" id="further"></div>
+
+            </div>
+
+        </div>
+        @* applicant details *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Applicant Details</div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <label for="name" class="form-label">Name of the Applicant</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-3 mt-3">
+                <input type="text" class="form-control" name="applicantname" id="applicantname">
+            </div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <label for="photo" class="form-label">Photograph of the Applicant</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <input type="file" class="form-control" name="applicantpic" id="applicantpic">
+            </div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-3 mt-3">
+                <input type="date" class="form-control" name="dob" id="dob">
+            </div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <label for="age" class="form-label">Age(In Years)</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-3 mt-3">
+                <input type="text" class="form-control" name="age" id="age">
+            </div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <label for="guardian" class="form-label">Father / Husband / Guardian Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-3 mt-3">
+                <input type="text" class="form-control" name="guardian" id="guardian">
+            </div>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-3 mt-3 fw-bold fs-6">
+                        <label for="gender" class="form-label">Gender</label>
+                        <span class="text-danger">*</span>
+                    </div>
+                    <div class="col-sm-3 mt-3" style="font-size: 0.8em;" id="gendercontainer">
+                        <input type="radio" name="gender" value="MALE"> MALE <br>
+                        <input type="radio" name="gender" value="FEMALE"> FEMALE <br>
+                        <input type="radio" name="gender" value="TRANSGENDER"> TRANSGENDER <br>
+                    </div>
+                    <div class="col-sm-3 mt-3 fw-bold fs-6">
+                        <label for="Category" class="form-label">Category</label>
+                        <span class="text-danger">*</span>
+                    </div>
+                    <div class="col-sm-3 mt-3" style="font-size: 0.8em;" id="categorycontainer">
+                        <input type="radio" name="category" value="PRIORITY HOUSEHOLD (PHH)"> PRIORITY HOUSEHOLD (PHH)
+                        <br>
+                        <input type="radio" name="category" value="ANTYODAYA ANNA YOJANA (AAY)"> ANTYODAYA ANNA YOJANA
+                        (AAY) <br>
+                        <input type="radio" name="category" value="NON-PRIORITY HOUSE HOLD (NPHH)"> NON-PRIORITY HOUSE
+                        HOLD (NPHH) <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <label for="Mobile" class="form-label">Mobile Number</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-3 mt-3">
+                <input type="text" class="form-control" name="mobile" id="mobile">
+            </div>
+            <div class="col-sm-3 mt-3 fw-bold fs-6">
+                <label for="email" class="form-label">E-mail</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-3 mt-3">
+                <input type="email" class="form-control" name="email" id="email">
+            </div>
+        </div>
+        @* Present address *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Present Address</div>
+            <div class="col-sm-6 mt-3 fw-bold fs-6">
+                <label for="address" class="form-label">Present Address</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-3">
+                <input type="text" class="form-control" name="address" id="address">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="district" class="form-label">Present District</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <select class="form-select" id="predistrict" name="predistrict">
+                    <option value="Please Select">Please Select</option>
+                    <option value="Jammu">Jammu</option>
+                    <option value="Rajouri">Rajouri</option>
+                    <option value="Poonch">Poonch</option>
+                    <option value="Kathua">Kathua</option>
+                </select>
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Present Tehsil</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <select class="form-select" id="pretehsil" name="pretehsil">
+                    <option value="Please Select">Please Select</option>
+                </select>
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Present Block Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="blockname" id="blockname">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Present Halqa Panchayat / Municipality Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="panchayat" id="panchayat">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Present Village Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="village" id="village">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Present Ward Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="ward" id="ward">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Pincode</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="prepincode" id="prepincode">
+            </div>
+        </div>
+        @* Permanent address *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Permanent Address</div>
+            <div class="col-sm-6 mt-3 fw-bold fs-6">
+                <label for="sameaddress" class="form-label">Is "Permanent Address" same as "Present Address"</label>
+            </div>
+            <div class="col-sm-6 mt-3" style="font-size: 0.8em;">
+                <input type="checkbox" name="sameaddress" id="sameaddress"> YES
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Permanent Address</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="peraddress" id="peraddress">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="district" class="form-label">Permanent District</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <select class="form-select" id="perdistrict" name="perdistrict">
+                    <option value="Please Select">Please Select</option>
+                    <option value="Jammu">Jammu</option>
+                    <option value="Rajouri">Rajouri</option>
+                    <option value="Poonch">Poonch</option>
+                    <option value="Kathua">Kathua</option>
+                </select>
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Permanent Tehsil</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <select class="form-select" id="pertehsil" name="pertehsil">
+                    <option value="Please Select">Please Select</option>
+                </select>
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Permanent Block Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="perblockname" id="perblockname">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Permanent Halqa Panchayat / Municipality Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="perpanchayat" id="perpanchayat">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Permanent Village Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="pervillage" id="pervillage">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="address" class="form-label">Permanent Ward Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="perward" id="perward">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="pincode" class="form-label">Pincode</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="perpincode" id="perpincode">
+            </div>
+        </div>
+        @* Bank details *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Bank Details</div>
+            <div class="col-sm-6 mt-3 fw-bold fs-6">
+                <label for="bank" class="form-label">Bank Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-3">
+                <select class="form-select" id="bankname" name="bankname">
+                    <option value="Please Select">Please Select</option>
+                    <option value="THE JAMMU KASHMIR BANK LTD.">THE JAMMU KASHMIR BANK LTD.</option>
+                    <option value="J&K GRAMEEN BANK">J&K GRAMEEN BANK</option>
+                    <option value="ELLAQUAI DEHATI BANK">ELLAQUAI DEHATI BANK</option>
+                    <option value="INDIA POST PAYMENTS BANK">INDIA POST PAYMENTS BANK</option>
+                </select>
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="branch" class="form-label">Branch Name</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="branchname" id="branchname">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="branch" class="form-label">IFSC Code</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="ifsc" id="ifsc">
+            </div>
+            <div class="col-sm-6 mt-1 fw-bold fs-6">
+                <label for="branch" class="form-label">Account No. of the Applicant</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-1">
+                <input type="text" class="form-control" name="account" id="account">
+            </div>
+        </div>
+        @* Previous pension details *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Previous Pension Details (If Any)</div>
+            <div class="col-sm-6 mt-3 fw-bold fs-6">
+                <label for="branch" class="form-label">Are you previously taking Pension from JK-ISSS/GOI-NSAP</label>
+                <span class="text-danger">*</span>
+            </div>
+            <div class="col-sm-6 mt-3 mb-1">
+                <select class="form-select " id="ispreviousBank" name="ispreviousBank">
+                    <option value="Please Select">Please Select</option>
+                    <option value="YES">YES</option>
+                    <option value="NO">NO</option>
+                </select>
+            </div>
+            <div class="row" id="previousBank">
+            
+            </div>
+        </div>
+        @* Consent *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Consent for Rapid Assessment System
+                (RAS)</div>
+            <div class="col-sm-6 mt-3 fw-bold fs-6">
+                <label for="consent" class="form-label"> Do you consent to share your email Id and mobile number
+                    with
+                    Rapid Assessment System developed by Government of India for taking your feedback on the
+                    service? Yes/No/क्या आप सेवा पर आपकी प्रतिक्रिया लेने के लिए भारत सरकार द्वारा विकसित रैपिड
+                    असेसमेंट सिस्टम के साथ अपना ईमेल आईडी और मोबाइल नंबर साझा करने के लिए सहमत हैं? हां नहीं <span
+                        class="text-danger">*</span>
+                </label>
+
+            </div>
+            <div class="col-sm-6 mt-3" style="font-size: 0.8em;">
+                <input type="radio" value="YES" name="consent" checked> YES
+                <span style="margin-right: 20pc;"></span>
+                <input type="radio" value="NO" name="consent"> NO
+            </div>
+        </div>
+        @* Declaration *@
+        <div class="row mb-3 mt-3 bg-light p-2">
+            <div class="col-sm-12 text-center fw-bold bg-primary text-light">Declaration</div>
+            <div class="row-sm-12 mt-3 fw-bold fs-6">
+                <label for="declaration" class="form-label"> I hereby declare that all the particulars stated above
+                    are
+                    true to the best of my knowledge and belief and no material information has been concealed or
+                    misstated. The financial assistance so received shall be incurred for the purpose of marriage
+                    only. I further state that if any inaccuracy is detected in the application, I shall be liable
+                    to forefeiture / refund of the financial assistance.
+                </label>
+
+            </div>
+
+            <div class="col-sm-6 mt-3 fw-bold" style="font-size: 0.8em;" id="iagreecontainer">
+                <div>
+                    <input type="checkbox" name="iagree" id="iagree"> I Agree
+                    <span class="text-danger">*</span>
+                </div>
+            </div>
+        </div>
+        @* button *@
+        <div class="row mb-3 mt-3 bg-light">
+            <div class="col-sm-12 text-center bg-info" style="height: 100px">
+                Department of Social Welfare, UT of J&K
+            </div>
+            <div class="col-sm-12 d-flex justify-content-end p-2 gap-2">
+                <button type="button" class="btn btn-secondary">Draft</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger">Close</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+            </div>
+        </div>
+
+
+    </div>
+</form>
+
+<script src="~/js/form.js"></script>

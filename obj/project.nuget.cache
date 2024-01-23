@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nzqQXcnE4IRRF+fvf+MYoMar6XkAlerFDQWZA/jf7cEIgT6HcAuwpdLd04JbhumlrmvyIA28N117UHN+AYZ+/A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lange\\Desktop\\project asp\\pensionForm\\pensionForm.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lange\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

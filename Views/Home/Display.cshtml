@@ -1,0 +1,139 @@
+@{
+	ViewBag.Title = "Result";
+}
+@{
+	Layout = null;
+}
+
+@{
+	var formDataJson = Newtonsoft.Json.JsonConvert.SerializeObject(TempData["FormData"]);
+}
+
+
+@section resultStyles {
+	<style>
+
+	</style>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Result</title>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+	<div class=" container-fluid d-flex justify-content-center align-items-center flex-column p-3 px-5 ">
+		<div class="d-flex justify-content-center flex-column text-center">
+			<h3>Union Territory of Jammu and Kashmir </h3>
+			<h4>Office of District Social Welfare Officer, DODA</h4>
+			<h5>Sanction Letter for JK-ISSS</h5>
+		</div>
+		<div class="justify-content-start" style="width: 100%;">
+			To <br><br>
+			THE MANAGER <br>
+			THE JAMMU AND KASHMIR BANK LIMITED <br>
+			B/O RAIL HEAD COMPLEX, JAMMU <br><br>
+			Please find the Particulars of Pensioner given below:
+		</div>
+		<table class="table table-bordered">
+			<tbody id="tableBody">
+			</tbody>
+		</table>
+		<div class="justify-content-start">
+			The Pensioner referred above has been sanctioned financial assistance under Pension Scheme JK-ISS, You
+			are
+			requested to credit an amount of Rs. 1000/- per month in the above mentioned bank account of the
+			beneficiary
+			after verifying the account number, unless stopped by department.
+		</div>
+		<button type="button" class="btn btn-light" onclick="window.print()">Print</button>
+	</div>
+</body>
+
+
+
+
+
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+
+		// Parse the JSON string into a JavaScript object
+		var formData = JSON.parse(@Html.Raw(formDataJson));
+
+		const { applicantname: applicantname, dob: dob, guardian: guardian, mobile: mobile
+			, email: email, pensiontype: pensiontype, bankname: bankname, branchname: branchname, ifsc: ifsc, account: account, address: address, predistrict: predistrict, pretehsil: pretehsil, panchayat: panchayat
+			, prepincode: prepincode, peraddress: peraddress, perdistrict: perdistrict, pertehsil: pertehsil, perpanchayat: perpanchayat, perpincode: perpincode } = formData;
+
+		const extractedData = {
+			applicantname: applicantname, dob: dob, guardian: guardian, mobile: mobile
+			, email: email, pensiontype: pensiontype, bankname: bankname, branchname: branchname, ifsc: ifsc, account: account, address: address, predistrict: predistrict, pretehsil: pretehsil, panchayat: panchayat
+			, prepincode: prepincode, peraddress: peraddress, perdistrict: perdistrict, pertehsil: pertehsil, perpanchayat: perpanchayat, perpincode: perpincode
+		}
+		console.log(extractedData);
+		const tableRow = [
+			{ "NAME OF APPLICANT": extractedData.applicantname },
+			{ "DATA OF BIRTH": extractedData.dob },
+			{ "FATHER/HUSBAND/GUARDIAN": extractedData.guardian },
+			{ "MOBILE/E-MAIL": extractedData.mobile + "/" + extractedData.email },
+			{ "NAME OF PENSION SCHEME (JK-ISSS/ GOI-NSAP)": "JK-ISSS" },
+			{ "TYPE OF PENSION UNDER ISSS": extractedData.pensiontype },
+			{
+				"BANK NAME/ BRANCH NAME":
+					extractedData.bankname + "/" + extractedData.branchname,
+			},
+			{
+				"IFSC CODE/ ACCOUNT NUMBER":
+					extractedData.ifsc + "/" + extractedData.account,
+			},
+			{
+				"PRESENT ADDRESS":
+					extractedData.address +
+					", TEHSIL:" +
+					extractedData.pretehsil +
+					",HALQA PANCHAYAT/URBAN AREA:" +
+					extractedData.panchayat +
+					", DISTRICT:" +
+					extractedData.predistrict +
+					", PIN CODE:" +
+					extractedData.prepincode,
+			},
+			{
+				"PERMANENT ADDRESS":
+					extractedData.peraddress +
+					", TEHSIL:" +
+					extractedData.pertehsil +
+					",HALQA PANCHAYAT/URBAN AREA:" +
+					extractedData.perpanchayat +
+					", DISTRICT:" +
+					extractedData.perdistrict +
+					", PIN CODE:" +
+					extractedData.perpincode,
+			},
+		];
+		tableRow.map((item) => {
+			const key = Object.keys(item)[0];
+			const value = Object.values(item)[0];
+			$("#tableBody").append(`
+				<tr style="border: 2px solid black;">
+					<td scope="row" style="border: 2px solid black;">${key}</td>
+					<td style="border: 2px solid black;">${value}</td>
+				</tr>
+			`);
+		});
+
+
+
+	});
+</script>
+
+</html>
