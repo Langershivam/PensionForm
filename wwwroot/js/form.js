@@ -163,19 +163,20 @@ $(document).ready(function () {
     const jsonData = JSON.stringify(formObject);
     console.log(formObject);
     const postData = { data: jsonData };
-
-    // Use AJAX to send the object to the server
-    $.ajax({
-      type: "POST",
-      url: "/Home/FormData", // Replace with your actual controller and action
-      data: postData,
-      success: function () {
-        window.location.href = "/Home/Display"; // Redirect to the second page
-      },
-      error: function (error) {
-        console.log(error);
-      },
-    });
+    if (result) {
+      // Use AJAX to send the object to the server
+      $.ajax({
+        type: "POST",
+        url: "/Home/FormData", // Replace with your actual controller and action
+        data: postData,
+        success: function () {
+          window.location.href = "/Home/Display"; // Redirect to the second page
+        },
+        error: function (error) {
+          console.log(error);
+        },
+      });
+    }
   });
   $("input").blur(function () {
     let id = $(this).attr("id");
